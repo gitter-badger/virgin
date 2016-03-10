@@ -21,6 +21,7 @@ var app = express();
 //
 var server = app//https.createServer(options, app)
 //
+var port = 6666;
 //
 global.route_accept = [];
 //
