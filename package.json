@@ -1,0 +1,55 @@
+{
+  "name": "virgin",
+  "version": "0.0.1",
+  "description": "MVC Router",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test_bcrypt": "./node_modules/mocha/bin/mocha ./test/test_bcrypt.js --reporter spec",
+    "test_database": "./node_modules/mocha/bin/mocha ./test/test_database.js --reporter spec",
+    "doc_gen": "python3 '/media/root/TOSHIBA/repos/vsn/17/bin/doc_run/info.py'"
+  },
+  "bin": {
+    "cli": "./bin/cli.js",
+    "testrun": "./bin/testrun.js",
+    "docgen": "./bin/docgen.js"
+  },
+  "keywords": [
+    "gulp",
+    "node"
+  ],
+  "author": "SVTVN",
+  "license": "SEE LICENSE IN PERSONAL",
+  "dependencies": {
+    "async": "^1.5.2",
+    "bcrypt-nodejs": "0.0.3",
+    "blueimp-file-upload-expressjs": "^0.4.4",
+    "body-parser": "^1.14.2",
+    "commander": "^2.9.0",
+    "cookie-parser": "^1.4.0",
+    "cron": "^1.1.0",
+    "crypto": "0.0.3",
+    "emailjs": "^1.0.1",
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
+    "express-session": "^1.12.1",
+    "jquery": "^2.1.4",
+    "lwip": "0.0.8",
+    "mime": "^1.3.4",
+    "moment": "^2.11.0",
+    "multer": "^1.1.0",
+    "mysql": "^2.10.0",
+    "rimraf": "^2.5.2",
+    "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {},
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satan/virgin"
+  },
+  "homepage": "https://github.com/satan/virgin#readme"
+}
