@@ -18,27 +18,6 @@ module.exports = function(app, router) {
 		}
 
 		app.get('/', function (req, res) {
-			//
-			//if ( req.session.user == undefined ){
-
-			//	res.redirect( '/login' );
-
-			//}else{
-				//
-				try{
-					
-					var _username = req.session.user.username;
-					var _avatar = req.session.user.avatar;
-
-					var _avatar = '/public/global_tmp/user_avatars/'+_username+'.png';
-
-
-				}catch(e){
-
-					var _avatar = '/public/global_tmp/user_avatars/'+_username+'.png';
-					
-				}
-				//
 
 				var data = {
 					
@@ -46,15 +25,12 @@ module.exports = function(app, router) {
 					module_version: '0.0.02',
 					layout: __root+'/app_modules/layouts/views/layouts/main',
 					title: 'Welcome Home',
-					message: '',
-					logged: logged_status,
-					user_avatar : _avatar,
-					userdata: req.session.user
+					message: ''
 
 				};
-				console.log('USER'+req.session.user)
+				
 				res.render(__root+'/app_modules/layouts/views/home', data);
-			//}
+			
 		});
 		
 	}
