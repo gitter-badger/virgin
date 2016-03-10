@@ -23,6 +23,27 @@ var server = app//https.createServer(options, app)
 //
 var port = 6666;
 //
+global.hbs = exphbs.create({
+	defaultLayout: __root+'/app_modules/layouts/views/layouts/main',
+	extname      : '.hbs',
+	handlebars : Handlebars,
+	helpers      : helpers,
+	partialsDir: [
+		__root+'/app_modules/layouts/views/partials/'
+	]
+});
+//
+app.engine('.hbs', hbs.engine);
+app.set('view engine', '.hbs');
+//
+app.disable('x-powered-by');
+//
+app.use(cookieParser());
+//
+var _app_limit = '50mb';
+app.use(bodyParser.json({limit: _app_limit}));
+app.use(bodyParser.urlencoded({limit: _app_limit, extended: true}));
+//
 global.route_accept = [];
 //
 var dir_modules = __root+'/app_modules/';
