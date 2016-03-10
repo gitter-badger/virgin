@@ -1,0 +1,58 @@
+<header>
+	<nav class='nav_main'>
+		<a href="/">Home</a>
+		<a href="/doc">Docs</a>
+
+		{{#unless logged }}
+		<a href="/login">Login</a>
+		<a href="/register">Register</a>
+		{{/unless}}
+	</nav>
+
+	{{#if logged }}
+	<nav class='nav_account' role='dropdown'>
+		<input id="account" type="checkbox" checked="checked">
+		<label for="account">
+			<img src="{{user_avatar}}">
+			{{userdata.username}}
+		</label>
+		<ul>
+			<li>
+				<a href="/account">Account</a>
+			</li>
+			<li>
+				<a href="/settings">Settings</a>
+			</li>
+			<li>
+				<a href="/logout">Logout</a>
+			</li>
+		</ul>
+	</nav>
+	{{/if}}
+	<nav role='dropdown'>
+		<input id="modules" type="checkbox" checked="checked">
+		<label for="modules">
+			Modules
+		</label>
+		<ul>
+			{{#if logged }}
+			<li>
+				<a href="/times">Times</a>
+			</li>
+			<li>
+				<a href="/users">Users</a>
+			</li>
+			<li>
+				<a href="/uploads">Uploads</a>
+			</li>
+			{{/if}}
+			<li>
+				<a href="/kitchen">Kitchen</a>
+			</li>
+			<li>
+				<a href="/projects">Projects</a>
+			</li>
+		</ul>
+	</nav>
+
+</header>

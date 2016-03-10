@@ -21,6 +21,19 @@ var app = express();
 //
 var server = app//https.createServer(options, app)
 //
+//
+global.route_accept = [];
+//
+var dir_modules = __root+'/app_modules/';
+//
+try {
+
+	require(__root+'/app_modules/layouts/routes/router.js')(app);
+
+} catch (err) {
+	console.log('Module Router Not Found: '+err)
+}
+//
 server.listen(port, function () {
 	console.log('server listening on: '+port);
 	
