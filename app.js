@@ -1,7 +1,6 @@
 'use strict';
 //
 global.__root = __dirname
-global.__api = [];
 //
 var express = require('express');
 var exphbs  = require('express-handlebars');
